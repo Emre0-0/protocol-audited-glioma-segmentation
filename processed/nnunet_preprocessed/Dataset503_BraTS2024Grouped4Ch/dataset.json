@@ -1,0 +1,19 @@
+{
+  "channel_names": {
+    "0": "t1n",
+    "1": "t1c",
+    "2": "t2w",
+    "3": "t2f"
+  },
+  "labels": {
+    "background": 0,
+    "label_1": 1,
+    "label_2": 2,
+    "label_3": 3,
+    "label_4": 4
+  },
+  "numTraining": 1155,
+  "file_ending": ".nii.gz",
+  "name": "BraTS2024Grouped4Ch",
+  "description": "Patient-independent BraTS 2024 development dataset. All longitudinal scans from a subject remain in one partition. The locked subject-level test set is excluded."
+}

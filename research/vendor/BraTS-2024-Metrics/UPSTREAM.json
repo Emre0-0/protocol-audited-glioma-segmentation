@@ -1,0 +1,14 @@
+{
+  "repository": "https://github.com/rachitsaluja/BraTS-2024-Metrics",
+  "commit": "f1131e340e155908553c226675644a6363b998b7",
+  "license": "Apache-2.0",
+  "files_sha256": {
+    "LICENSE": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6",
+    "metrics_GLI.py": "3826004ac62cd13ee9c910c8be683702c9716051da1595acccbd96595f970cc2",
+    "README.md": "ecbdbb7405127f00d5d9c08642471cc7070ac143c1a61ec1e58af0c75d180f99",
+    "requirements.txt": "6b7235d3eb77e76c0f5f56a7d0e7623f7a6fd4313521cbdbe9405659f920a509",
+    "surface_distance/__init__.py": "115d1f3730f73316e162060d8f027d2f66ac21911f73fbca44fac71512df22ef",
+    "surface_distance/lookup_tables.py": "c42425e459a5c30fa42e6cdd89d2516699690de305a62606afd17f7cd156ffdb",
+    "surface_distance/metrics.py": "ef4e19951ab46fc39b4f241287506c3972a461eb9d55cf04351dd606ae48a5ac"
+  }
+}

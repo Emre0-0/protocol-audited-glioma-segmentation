@@ -1,0 +1,20 @@
+{
+  "paths": {
+    "experiment_dir": "experiments/final_locked_test_v1/reproduced_validation",
+    "baseline_official_metrics": "experiments/grouped_delta_roi_v1/official_metrics/baseline"
+  },
+  "variants": [
+    {
+      "name": "et_cc_topology_guard_specialist_nonrc_reproduced"
+    }
+  ],
+  "selection_gate": {
+    "minimum_six_region_mean_gain": 0.005,
+    "minimum_et_gain": 0.02,
+    "minimum_non_degraded_region_count": 6,
+    "maximum_any_region_drop": 0.0001,
+    "maximum_rc_drop": 0.0
+  },
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 20260807
+}

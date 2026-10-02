@@ -1,0 +1,50 @@
+{
+  "experiment_name": "grouped_et_topology_guard_v2",
+  "protocol": {
+    "fold": 0,
+    "expected_validation_cases": 223,
+    "split_file": "processed/nnunet_preprocessed/Dataset503_BraTS2024Grouped4Ch/splits_final.json",
+    "locked_test_cases": "processed/brats_subject_grouped_protocol_v1/locked_test_cases.csv"
+  },
+  "paths": {
+    "baseline_prediction_dir": "experiments/nnunet_results/Dataset503_BraTS2024Grouped4Ch/nnUNetTrainer_250epochs__nnUNetResEncUNet10p5GBPlans__3d_fullres/fold_0/validation",
+    "specialist_prediction_dir": "experiments/nnunet_results/Dataset503_BraTS2024Grouped4Ch/nnUNetTrainer_BraTSRegionAware120__nnUNetResEncUNet9GBPlans__3d_fullres/fold_0/validation",
+    "ground_truth_dir": "processed/nnunet_raw/Dataset503_BraTS2024Grouped4Ch/labelsTr",
+    "baseline_checkpoint": "experiments/nnunet_results/Dataset503_BraTS2024Grouped4Ch/nnUNetTrainer_250epochs__nnUNetResEncUNet10p5GBPlans__3d_fullres/fold_0/checkpoint_best.pth",
+    "specialist_checkpoint": "experiments/nnunet_results/Dataset503_BraTS2024Grouped4Ch/nnUNetTrainer_BraTSRegionAware120__nnUNetResEncUNet9GBPlans__3d_fullres/fold_0/checkpoint_best.pth",
+    "baseline_official_metrics": "experiments/grouped_delta_roi_v1/official_metrics/baseline",
+    "official_metric_vendor": "research/vendor/BraTS-2024-Metrics",
+    "v1_experiment_dir": "experiments/grouped_et_hybrid_v1",
+    "experiment_dir": "experiments/grouped_et_topology_guard_v2"
+  },
+  "variants": [
+    {
+      "name": "et_cc_topology_guard_background",
+      "v1_variant": "et_cc_any_to_background",
+      "fallback": "background",
+      "required_voxel_invariants": ["NETC", "SNFH", "RC"]
+    },
+    {
+      "name": "et_cc_topology_guard_neighbor_nonrc",
+      "v1_variant": "et_cc_any_to_neighbor_nonrc",
+      "fallback": "neighbor_nonrc",
+      "required_voxel_invariants": ["RC"]
+    },
+    {
+      "name": "et_cc_topology_guard_specialist_nonrc",
+      "v1_variant": "et_cc_any_to_specialist_nonrc",
+      "fallback": "specialist_nonrc",
+      "required_voxel_invariants": ["RC"]
+    }
+  ],
+  "selection_gate": {
+    "minimum_six_region_mean_gain": 0.005,
+    "minimum_et_gain": 0.02,
+    "minimum_non_degraded_region_count": 6,
+    "maximum_any_region_drop": 0.0001,
+    "maximum_rc_drop": 0.0
+  },
+  "official_metric_workers": 4,
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 20260719
+}

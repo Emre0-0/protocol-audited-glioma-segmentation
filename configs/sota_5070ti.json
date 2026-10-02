@@ -1,0 +1,71 @@
+{
+  "project_root": ".",
+  "archive_path": "BrainMRI_Project_Archives.zip",
+  "processed_root": "processed",
+  "brats_npz_root": "processed/brats2024_npz_full",
+  "pretrain_npz_root": "processed/pretrain_t1_npz",
+  "anomaly_residual_root": "processed/brats_anomaly_residuals_sota_5070ti",
+  "eda_root": "_archive_inspect/eda_outputs/eda_outputs",
+  "experiments_root": "experiments",
+  "seed": 42,
+  "device": "cuda",
+  "num_workers": 8,
+  "persistent_workers": true,
+  "prefetch_factor": 4,
+  "amp": true,
+  "allow_tf32": true,
+  "cudnn_benchmark": true,
+  "matmul_precision": "high",
+  "step_sleep_sec": 0.25,
+  "model": {
+    "base_channels": 48,
+    "dropout": 0.15,
+    "num_classes": 5,
+    "brats_in_channels": 4,
+    "pretrain_in_channels": 1
+  },
+  "brats_training": {
+    "patch_size": [128, 128, 128],
+    "batch_size": 2,
+    "epochs": 160,
+    "train_patches_per_epoch": 1600,
+    "val_patches_per_epoch": 320,
+    "foreground_patch_prob": 0.8,
+    "lr": 0.00008,
+    "weight_decay": 0.00002,
+    "max_grad_norm": 1.0,
+    "scheduler_factor": 0.5,
+    "scheduler_patience": 10,
+    "min_lr": 0.000001,
+    "intensity_augment": true,
+    "foreground_label_weights": {
+      "1": 2.5,
+      "2": 1.0,
+      "3": 1.7,
+      "4": 1.7
+    },
+    "early_stopping_patience": 30,
+    "min_delta": 0.0001
+  },
+  "pretraining": {
+    "patch_size": [128, 128, 128],
+    "batch_size": 2,
+    "epochs": 100,
+    "patches_per_epoch": 1600,
+    "lr": 0.00008,
+    "weight_decay": 0.00002,
+    "max_grad_norm": 1.0,
+    "scheduler_factor": 0.5,
+    "scheduler_patience": 8,
+    "min_lr": 0.000001,
+    "mask_ratio": 0.4,
+    "noise_std": 0.05,
+    "early_stopping_patience": 20,
+    "min_delta": 0.0001
+  },
+  "evaluation": {
+    "patch_size": [128, 128, 128],
+    "overlap": 0.5,
+    "max_cases": null
+  }
+}

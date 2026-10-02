@@ -1,0 +1,1106 @@
+{
+  "schema_version": 2,
+  "bootstrap": {
+    "samples": 10000,
+    "unit": "subject",
+    "seed": 20260808
+  },
+  "grouped_oof": {
+    "status": "COMPLETE",
+    "completed_folds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "completed_fold_count": 5,
+    "expected_fold_count": 5,
+    "cases": 1155,
+    "subjects": 521,
+    "case_weighted_cluster_bootstrap": {
+      "WT_LesionWise_Score_Dice": {
+        "mean": 0.7979071450054405,
+        "ci95_lower": 0.7818706622609997,
+        "ci95_upper": 0.8130702541485649
+      },
+      "TC_LesionWise_Score_Dice": {
+        "mean": 0.7313223285397982,
+        "ci95_lower": 0.7070650388137975,
+        "ci95_upper": 0.755190573994031
+      },
+      "NETC_LesionWise_Score_Dice": {
+        "mean": 0.812951513474754,
+        "ci95_lower": 0.7881899040866472,
+        "ci95_upper": 0.8367694393369594
+      },
+      "SNFH_LesionWise_Score_Dice": {
+        "mean": 0.8018726281900562,
+        "ci95_lower": 0.7864674755735747,
+        "ci95_upper": 0.8168210997148648
+      },
+      "ET_LesionWise_Score_Dice": {
+        "mean": 0.7315244145140133,
+        "ci95_lower": 0.70822916542439,
+        "ci95_upper": 0.7543955567320247
+      },
+      "RC_LesionWise_Score_Dice": {
+        "mean": 0.7048307663927393,
+        "ci95_lower": 0.6752042560202224,
+        "ci95_upper": 0.7333635490316575
+      },
+      "WT_LesionWise_Score_HD95": {
+        "mean": 36.19040978262977,
+        "ci95_lower": 31.52882941898354,
+        "ci95_upper": 41.0875679027636
+      },
+      "TC_LesionWise_Score_HD95": {
+        "mean": 50.75114676054541,
+        "ci95_lower": 43.220187949519115,
+        "ci95_upper": 58.711579823407945
+      },
+      "NETC_LesionWise_Score_HD95": {
+        "mean": 32.12745628826884,
+        "ci95_lower": 26.001440353249812,
+        "ci95_upper": 38.59115524535743
+      },
+      "SNFH_LesionWise_Score_HD95": {
+        "mean": 33.273892065986736,
+        "ci95_lower": 28.7336824021265,
+        "ci95_upper": 38.01282313008402
+      },
+      "ET_LesionWise_Score_HD95": {
+        "mean": 50.80109962875289,
+        "ci95_lower": 43.33267654798848,
+        "ci95_upper": 58.299288309267006
+      },
+      "RC_LesionWise_Score_HD95": {
+        "mean": 50.562223705981474,
+        "ci95_lower": 41.594282779567244,
+        "ci95_upper": 60.27183936675632
+      },
+      "six_region_mean": {
+        "mean": 0.763401466019467,
+        "ci95_lower": 0.751947657868242,
+        "ci95_upper": 0.7746321307156268
+      }
+    },
+    "subject_weighted_alternative_estimand": {
+      "WT_LesionWise_Score_Dice": 0.7917505340895155,
+      "TC_LesionWise_Score_Dice": 0.7411822349320953,
+      "NETC_LesionWise_Score_Dice": 0.8050870060369426,
+      "SNFH_LesionWise_Score_Dice": 0.7953126353526382,
+      "ET_LesionWise_Score_Dice": 0.7405489045512221,
+      "RC_LesionWise_Score_Dice": 0.7007913113127763,
+      "WT_LesionWise_Score_HD95": 37.41246909040351,
+      "TC_LesionWise_Score_HD95": 49.34332860563439,
+      "NETC_LesionWise_Score_HD95": 33.44497361043663,
+      "SNFH_LesionWise_Score_HD95": 34.39480614663731,
+      "ET_LesionWise_Score_HD95": 49.72897856033832,
+      "RC_LesionWise_Score_HD95": 51.228739510290985,
+      "six_region_mean": 0.7624454377125317
+    },
+    "lesion_detection": {
+      "WT": {
+        "true_positive_lesions": 1388.0,
+        "false_positive_lesions": 161.0,
+        "false_negative_lesions": 102.0,
+        "reference_lesions": 1490.0,
+        "predicted_lesions": 1549.0,
+        "sensitivity": 0.9315436241610738,
+        "precision": 0.8960619754680439,
+        "f1": 0.9134583744652847,
+        "sensitivity_ci95_lower": 0.915983443509929,
+        "sensitivity_ci95_upper": 0.9463449149834631,
+        "precision_ci95_lower": 0.875,
+        "precision_ci95_upper": 0.9167733674775929,
+        "f1_ci95_lower": 0.9002922555348712,
+        "f1_ci95_upper": 0.926138323255363
+      },
+      "TC": {
+        "true_positive_lesions": 989.0,
+        "false_positive_lesions": 124.0,
+        "false_negative_lesions": 148.0,
+        "reference_lesions": 1137.0,
+        "predicted_lesions": 1113.0,
+        "sensitivity": 0.8698328935795955,
+        "precision": 0.8885893980233602,
+        "f1": 0.8791111111111111,
+        "sensitivity_ci95_lower": 0.8443508572437928,
+        "sensitivity_ci95_upper": 0.894399804981739,
+        "precision_ci95_lower": 0.8621340453674388,
+        "precision_ci95_upper": 0.9135044589390299,
+        "f1_ci95_lower": 0.8599155188758156,
+        "f1_ci95_upper": 0.8970399869429047
+      },
+      "NETC": {
+        "true_positive_lesions": 387.0,
+        "false_positive_lesions": 23.0,
+        "false_negative_lesions": 89.0,
+        "reference_lesions": 476.0,
+        "predicted_lesions": 410.0,
+        "sensitivity": 0.8130252100840336,
+        "precision": 0.9439024390243902,
+        "f1": 0.873589164785553,
+        "sensitivity_ci95_lower": 0.772828389580053,
+        "sensitivity_ci95_upper": 0.852,
+        "precision_ci95_lower": 0.9176755447941889,
+        "precision_ci95_upper": 0.9678217821782178,
+        "f1_ci95_lower": 0.8459211290938803,
+        "f1_ci95_upper": 0.8992882491893596
+      },
+      "SNFH": {
+        "true_positive_lesions": 1347.0,
+        "false_positive_lesions": 151.0,
+        "false_negative_lesions": 87.0,
+        "reference_lesions": 1434.0,
+        "predicted_lesions": 1498.0,
+        "sensitivity": 0.9393305439330544,
+        "precision": 0.8991989319092123,
+        "f1": 0.9188267394270122,
+        "sensitivity_ci95_lower": 0.9242110747460442,
+        "sensitivity_ci95_upper": 0.953538631444296,
+        "precision_ci95_lower": 0.8785758559622197,
+        "precision_ci95_upper": 0.9193551166047886,
+        "f1_ci95_lower": 0.9058115168013079,
+        "f1_ci95_upper": 0.9315879459987909
+      },
+      "ET": {
+        "true_positive_lesions": 953.0,
+        "false_positive_lesions": 134.0,
+        "false_negative_lesions": 129.0,
+        "reference_lesions": 1082.0,
+        "predicted_lesions": 1087.0,
+        "sensitivity": 0.8807763401109058,
+        "precision": 0.8767249310027599,
+        "f1": 0.8787459658828954,
+        "sensitivity_ci95_lower": 0.854809393759598,
+        "sensitivity_ci95_upper": 0.9057341113367389,
+        "precision_ci95_lower": 0.8495934032950174,
+        "precision_ci95_upper": 0.902015393039669,
+        "f1_ci95_lower": 0.859374329974271,
+        "f1_ci95_upper": 0.8968613004275051
+      },
+      "RC": {
+        "true_positive_lesions": 974.0,
+        "false_positive_lesions": 169.0,
+        "false_negative_lesions": 40.0,
+        "reference_lesions": 1014.0,
+        "predicted_lesions": 1143.0,
+        "sensitivity": 0.960552268244576,
+        "precision": 0.8521434820647419,
+        "f1": 0.9031061659712563,
+        "sensitivity_ci95_lower": 0.9408091371018964,
+        "sensitivity_ci95_upper": 0.9767892702951955,
+        "precision_ci95_lower": 0.8193868184489158,
+        "precision_ci95_upper": 0.8827226526182884,
+        "f1_ci95_lower": 0.8804391255662443,
+        "f1_ci95_upper": 0.923349698942834
+      }
+    },
+    "folds": [
+      {
+        "fold": 0,
+        "cases": 223,
+        "subjects": 103,
+        "WT": 0.8021199474084193,
+        "TC": 0.767117581322958,
+        "NETC": 0.8128228969855393,
+        "SNFH": 0.8154442900814924,
+        "ET": 0.7528649265666344,
+        "RC": 0.7054946915345656,
+        "six_region_mean": 0.7759773889832683
+      },
+      {
+        "fold": 1,
+        "cases": 247,
+        "subjects": 107,
+        "WT": 0.7957916338882561,
+        "TC": 0.7196164119910093,
+        "NETC": 0.8149988518266927,
+        "SNFH": 0.7943122074936723,
+        "ET": 0.7265455124202828,
+        "RC": 0.6862410492241497,
+        "six_region_mean": 0.7562509444740105
+      },
+      {
+        "fold": 2,
+        "cases": 243,
+        "subjects": 105,
+        "WT": 0.7858845377629073,
+        "TC": 0.6765694544730279,
+        "NETC": 0.8191768147451476,
+        "SNFH": 0.7942087874649768,
+        "ET": 0.672332256358468,
+        "RC": 0.7529768203059801,
+        "six_region_mean": 0.7501914451850847
+      },
+      {
+        "fold": 3,
+        "cases": 225,
+        "subjects": 105,
+        "WT": 0.805414676617111,
+        "TC": 0.776945279991629,
+        "NETC": 0.7823871657739276,
+        "SNFH": 0.8052029561953744,
+        "ET": 0.7773762955859657,
+        "RC": 0.6768108807949315,
+        "six_region_mean": 0.7706895424931566
+      },
+      {
+        "fold": 4,
+        "cases": 217,
+        "subjects": 101,
+        "WT": 0.8016646346708319,
+        "TC": 0.7218698139705327,
+        "NETC": 0.8354732596874097,
+        "SNFH": 0.8016603369698456,
+        "ET": 0.7340031049288759,
+        "RC": 0.700446379261881,
+        "six_region_mean": 0.7658529215815628
+      }
+    ],
+    "fold_hd95": [
+      {
+        "fold": 0,
+        "cases": 223,
+        "subjects": 103,
+        "region": "WT",
+        "mean": 33.165561788785084,
+        "ci95_lower": 23.249450337071554,
+        "ci95_upper": 44.11773193670533
+      },
+      {
+        "fold": 0,
+        "cases": 223,
+        "subjects": 103,
+        "region": "TC",
+        "mean": 39.72055561135104,
+        "ci95_lower": 25.03916097207462,
+        "ci95_upper": 57.17663688410695
+      },
+      {
+        "fold": 0,
+        "cases": 223,
+        "subjects": 103,
+        "region": "NETC",
+        "mean": 27.340295205855572,
+        "ci95_lower": 15.162699455541317,
+        "ci95_upper": 41.59166199100097
+      },
+      {
+        "fold": 0,
+        "cases": 223,
+        "subjects": 103,
+        "region": "SNFH",
+        "mean": 27.331455896318072,
+        "ci95_lower": 18.089007425886496,
+        "ci95_upper": 37.74005469746864
+      },
+      {
+        "fold": 0,
+        "cases": 223,
+        "subjects": 103,
+        "region": "ET",
+        "mean": 46.077096903157354,
+        "ci95_lower": 29.43746655763667,
+        "ci95_upper": 65.17030401696364
+      },
+      {
+        "fold": 0,
+        "cases": 223,
+        "subjects": 103,
+        "region": "RC",
+        "mean": 53.202376965828854,
+        "ci95_lower": 30.25128339094368,
+        "ci95_upper": 79.64036203175877
+      },
+      {
+        "fold": 1,
+        "cases": 247,
+        "subjects": 107,
+        "region": "WT",
+        "mean": 37.01719459445259,
+        "ci95_lower": 26.649986031037727,
+        "ci95_upper": 48.41273654103764
+      },
+      {
+        "fold": 1,
+        "cases": 247,
+        "subjects": 107,
+        "region": "TC",
+        "mean": 49.84372290788269,
+        "ci95_lower": 34.54553515816318,
+        "ci95_upper": 66.61645189777217
+      },
+      {
+        "fold": 1,
+        "cases": 247,
+        "subjects": 107,
+        "region": "NETC",
+        "mean": 30.24277965239557,
+        "ci95_lower": 18.602331453593187,
+        "ci95_upper": 43.05117264624737
+      },
+      {
+        "fold": 1,
+        "cases": 247,
+        "subjects": 107,
+        "region": "SNFH",
+        "mean": 34.85119241725712,
+        "ci95_lower": 24.81032070692626,
+        "ci95_upper": 45.79606680417785
+      },
+      {
+        "fold": 1,
+        "cases": 247,
+        "subjects": 107,
+        "region": "ET",
+        "mean": 47.54944768932487,
+        "ci95_lower": 32.37559834559859,
+        "ci95_upper": 64.01665736449125
+      },
+      {
+        "fold": 1,
+        "cases": 247,
+        "subjects": 107,
+        "region": "RC",
+        "mean": 57.35932001707592,
+        "ci95_lower": 37.07633620693123,
+        "ci95_upper": 79.5930676944634
+      },
+      {
+        "fold": 2,
+        "cases": 243,
+        "subjects": 105,
+        "region": "WT",
+        "mean": 40.21633747010381,
+        "ci95_lower": 29.132867141867614,
+        "ci95_upper": 52.449027267406315
+      },
+      {
+        "fold": 2,
+        "cases": 243,
+        "subjects": 105,
+        "region": "TC",
+        "mean": 65.09359949003071,
+        "ci95_lower": 46.18441941183639,
+        "ci95_upper": 86.30312512873651
+      },
+      {
+        "fold": 2,
+        "cases": 243,
+        "subjects": 105,
+        "region": "NETC",
+        "mean": 29.703469685211182,
+        "ci95_lower": 17.602977628018934,
+        "ci95_upper": 43.66825950314984
+      },
+      {
+        "fold": 2,
+        "cases": 243,
+        "subjects": 105,
+        "region": "SNFH",
+        "mean": 36.58584773679008,
+        "ci95_lower": 26.012182552184022,
+        "ci95_upper": 48.27254379766036
+      },
+      {
+        "fold": 2,
+        "cases": 243,
+        "subjects": 105,
+        "region": "ET",
+        "mean": 65.92736307013058,
+        "ci95_lower": 47.68330386061066,
+        "ci95_upper": 86.32172264638174
+      },
+      {
+        "fold": 2,
+        "cases": 243,
+        "subjects": 105,
+        "region": "RC",
+        "mean": 39.954631233073606,
+        "ci95_lower": 24.863426236571097,
+        "ci95_upper": 59.23277141489472
+      },
+      {
+        "fold": 3,
+        "cases": 225,
+        "subjects": 105,
+        "region": "WT",
+        "mean": 30.884407556880543,
+        "ci95_lower": 21.52512963724206,
+        "ci95_upper": 41.64895363289072
+      },
+      {
+        "fold": 3,
+        "cases": 225,
+        "subjects": 105,
+        "region": "TC",
+        "mean": 41.58866839141573,
+        "ci95_lower": 27.664521765238113,
+        "ci95_upper": 56.683187046895604
+      },
+      {
+        "fold": 3,
+        "cases": 225,
+        "subjects": 105,
+        "region": "NETC",
+        "mean": 45.36991661667866,
+        "ci95_lower": 29.856137559018162,
+        "ci95_upper": 63.02129473288902
+      },
+      {
+        "fold": 3,
+        "cases": 225,
+        "subjects": 105,
+        "region": "SNFH",
+        "mean": 30.44338669068747,
+        "ci95_lower": 21.12500698431868,
+        "ci95_upper": 41.3748978850857
+      },
+      {
+        "fold": 3,
+        "cases": 225,
+        "subjects": 105,
+        "region": "ET",
+        "mean": 41.551655977349625,
+        "ci95_lower": 27.712155233396366,
+        "ci95_upper": 56.65785037245006
+      },
+      {
+        "fold": 3,
+        "cases": 225,
+        "subjects": 105,
+        "region": "RC",
+        "mean": 57.02644252807296,
+        "ci95_lower": 37.39617849259209,
+        "ci95_upper": 78.60351319100242
+      },
+      {
+        "fold": 4,
+        "cases": 217,
+        "subjects": 101,
+        "region": "WT",
+        "mean": 39.35112557453999,
+        "ci95_lower": 29.24698180582641,
+        "ci95_upper": 49.90545328043132
+      },
+      {
+        "fold": 4,
+        "cases": 217,
+        "subjects": 101,
+        "region": "TC",
+        "mean": 56.55896767145457,
+        "ci95_lower": 39.75456458704842,
+        "ci95_upper": 75.66538673659309
+      },
+      {
+        "fold": 4,
+        "cases": 217,
+        "subjects": 101,
+        "region": "NETC",
+        "mean": 28.175968827852497,
+        "ci95_lower": 14.923711724181175,
+        "ci95_upper": 43.597151339624304
+      },
+      {
+        "fold": 4,
+        "cases": 217,
+        "subjects": 101,
+        "region": "SNFH",
+        "mean": 36.811350870177776,
+        "ci95_lower": 26.91076866612717,
+        "ci95_upper": 47.42967057495484
+      },
+      {
+        "fold": 4,
+        "cases": 217,
+        "subjects": 101,
+        "region": "ET",
+        "mean": 52.00871917786568,
+        "ci95_lower": 36.47311385803355,
+        "ci95_upper": 69.1316097848366
+      },
+      {
+        "fold": 4,
+        "cases": 217,
+        "subjects": 101,
+        "region": "RC",
+        "mean": 45.28830098782355,
+        "ci95_lower": 29.721220560923502,
+        "ci95_upper": 63.74050842461475
+      }
+    ],
+    "warning": null
+  },
+  "locked_test": {
+    "status": "ONE_TIME_RETROSPECTIVE_HOLDOUT_CLOSED",
+    "evidence_class": "Secondary retrospective subject-disjoint holdout; not pristine external evidence because the partition was defined after legacy exploration.",
+    "legacy_case_roles": {
+      "train": 139,
+      "val": 27,
+      "test": 29
+    },
+    "cases": 195,
+    "subjects": 92,
+    "case_weighted_subject_cluster_bootstrap": {
+      "WT": {
+        "baseline": 0.8120087136123096,
+        "final": 0.8119816812003431,
+        "delta": -2.703241196655437e-05,
+        "baseline_ci95_lower": 0.776905746334012,
+        "baseline_ci95_upper": 0.8435209816687493,
+        "final_ci95_lower": 0.7768644605470124,
+        "final_ci95_upper": 0.8435097553317096,
+        "delta_ci95_lower": -7.469171416805697e-05,
+        "delta_ci95_upper": 1.2260373824943268e-05,
+        "cluster_sign_flip_p_case_weighted_two_sided": 0.24227757722422777,
+        "cluster_sign_flip_holm_adjusted_p": 1.0,
+        "subject_weighted_sign_flip_p_two_sided": 0.4125658743412566,
+        "subject_weighted_sign_flip_holm_adjusted_p": 1.0
+      },
+      "TC": {
+        "baseline": 0.7195036314132961,
+        "final": 0.729183028395145,
+        "delta": 0.009679396981848942,
+        "baseline_ci95_lower": 0.666446692817001,
+        "baseline_ci95_upper": 0.7701210521202956,
+        "final_ci95_lower": 0.6738026376547063,
+        "final_ci95_upper": 0.7827413348908778,
+        "delta_ci95_lower": -0.006289101819884118,
+        "delta_ci95_upper": 0.029165947886649824,
+        "cluster_sign_flip_p_case_weighted_two_sided": 0.2680773192268077,
+        "cluster_sign_flip_holm_adjusted_p": 1.0,
+        "subject_weighted_sign_flip_p_two_sided": 0.42016579834201656,
+        "subject_weighted_sign_flip_holm_adjusted_p": 1.0
+      },
+      "NETC": {
+        "baseline": 0.7816276234379345,
+        "final": 0.781625879876716,
+        "delta": -1.7435612185145999e-06,
+        "baseline_ci95_lower": 0.7128316471549881,
+        "baseline_ci95_upper": 0.8475835574857145,
+        "final_ci95_lower": 0.7128256104126863,
+        "final_ci95_upper": 0.8475826857371851,
+        "delta_ci95_lower": -5.067471823794189e-06,
+        "delta_ci95_upper": 3.980794086727577e-07,
+        "cluster_sign_flip_p_case_weighted_two_sided": 0.4990850091499085,
+        "cluster_sign_flip_holm_adjusted_p": 1.0,
+        "subject_weighted_sign_flip_p_two_sided": 0.4997550024499755,
+        "subject_weighted_sign_flip_holm_adjusted_p": 1.0
+      },
+      "SNFH": {
+        "baseline": 0.8101784845812412,
+        "final": 0.8123697569821948,
+        "delta": 0.0021912724009536255,
+        "baseline_ci95_lower": 0.7766905836201716,
+        "baseline_ci95_upper": 0.840668550883395,
+        "final_ci95_lower": 0.7788258099030064,
+        "final_ci95_upper": 0.8429677660874713,
+        "delta_ci95_lower": -2.1078080557418443e-05,
+        "delta_ci95_upper": 0.006920527078441826,
+        "cluster_sign_flip_p_case_weighted_two_sided": 0.9809101908980911,
+        "cluster_sign_flip_holm_adjusted_p": 1.0,
+        "subject_weighted_sign_flip_p_two_sided": 0.9552404475955241,
+        "subject_weighted_sign_flip_holm_adjusted_p": 1.0
+      },
+      "ET": {
+        "baseline": 0.7202101388474255,
+        "final": 0.7269972199060575,
+        "delta": 0.006787081058632016,
+        "baseline_ci95_lower": 0.6675167721837352,
+        "baseline_ci95_upper": 0.7707262475173502,
+        "final_ci95_lower": 0.6740156514890646,
+        "final_ci95_upper": 0.7780638125677953,
+        "delta_ci95_lower": -0.017693426990361683,
+        "delta_ci95_upper": 0.036931517395808404,
+        "cluster_sign_flip_p_case_weighted_two_sided": 0.6679133208667913,
+        "cluster_sign_flip_holm_adjusted_p": 1.0,
+        "subject_weighted_sign_flip_p_two_sided": 0.914750852491475,
+        "subject_weighted_sign_flip_holm_adjusted_p": 1.0
+      },
+      "RC": {
+        "baseline": 0.7114290493606475,
+        "final": 0.7114290493606475,
+        "delta": 0.0,
+        "baseline_ci95_lower": 0.6458834927231186,
+        "baseline_ci95_upper": 0.7746974231951511,
+        "final_ci95_lower": 0.6458834927231186,
+        "final_ci95_upper": 0.7746974231951511,
+        "delta_ci95_lower": 0.0,
+        "delta_ci95_upper": 0.0,
+        "cluster_sign_flip_p_case_weighted_two_sided": 1.0,
+        "cluster_sign_flip_holm_adjusted_p": 1.0,
+        "subject_weighted_sign_flip_p_two_sided": 1.0,
+        "subject_weighted_sign_flip_holm_adjusted_p": 1.0
+      },
+      "Six-region mean": {
+        "baseline": 0.7591596068754758,
+        "final": 0.7622644359535174,
+        "delta": 0.00310482907804166,
+        "baseline_ci95_lower": 0.7332426052816234,
+        "baseline_ci95_upper": 0.7852422922974592,
+        "final_ci95_lower": 0.7349412815201483,
+        "final_ci95_upper": 0.7895271485933387,
+        "delta_ci95_lower": -0.0028593484576251603,
+        "delta_ci95_upper": 0.010041092333510138,
+        "cluster_sign_flip_p_case_weighted_two_sided": 0.3686463135368646,
+        "cluster_sign_flip_holm_adjusted_p": 1.0,
+        "subject_weighted_sign_flip_p_two_sided": 0.6417135828641714,
+        "subject_weighted_sign_flip_holm_adjusted_p": 1.0
+      }
+    },
+    "subject_weighted_alternative_estimand": {
+      "WT": {
+        "baseline": 0.7992735970216995,
+        "final": 0.7992401694608289,
+        "delta": -3.342756087065801e-05
+      },
+      "TC": {
+        "baseline": 0.7108075893733946,
+        "final": 0.7183658112698322,
+        "delta": 0.007558221896437622
+      },
+      "NETC": {
+        "baseline": 0.8275240757325225,
+        "final": 0.8275234857406113,
+        "delta": -5.899919112151153e-07
+      },
+      "SNFH": {
+        "baseline": 0.8043862276440507,
+        "final": 0.8055418881813531,
+        "delta": 0.0011556605373024276
+      },
+      "ET": {
+        "baseline": 0.7218868037338552,
+        "final": 0.7236802300205248,
+        "delta": 0.0017934262866696749
+      },
+      "RC": {
+        "baseline": 0.729975428841386,
+        "final": 0.729975428841386,
+        "delta": 0.0
+      },
+      "Six-region mean": {
+        "baseline": 0.7656422870578181,
+        "final": 0.7673878355857561,
+        "delta": 0.0017455485279379568
+      }
+    },
+    "hd95_case_weighted_subject_cluster_bootstrap": {
+      "WT": {
+        "baseline": 29.842193714776425,
+        "final": 29.853183579779788,
+        "delta": 0.01098986500336352,
+        "baseline_ci95_lower": 20.46500712773205,
+        "baseline_ci95_upper": 40.54045612415614,
+        "final_ci95_lower": 20.46876882891512,
+        "final_ci95_upper": 40.56373710586859,
+        "delta_ci95_lower": -0.008355390577704824,
+        "delta_ci95_upper": 0.03453668805023077
+      },
+      "TC": {
+        "baseline": 42.786225590924325,
+        "final": 42.945596461428075,
+        "delta": 0.15937087050374998,
+        "baseline_ci95_lower": 28.97427437157926,
+        "baseline_ci95_upper": 58.271791376770565,
+        "final_ci95_lower": 27.805135988239467,
+        "final_ci95_upper": 59.522259826875704,
+        "delta_ci95_lower": -7.618210944629553,
+        "delta_ci95_upper": 7.773683972161064
+      },
+      "NETC": {
+        "baseline": 23.186990241890452,
+        "final": 23.187556599531256,
+        "delta": 0.0005663576408032611,
+        "baseline_ci95_lower": 11.891587622358099,
+        "baseline_ci95_upper": 35.84557542395378,
+        "final_ci95_lower": 11.892174186615259,
+        "final_ci95_upper": 35.8461421541983,
+        "delta_ci95_lower": 0.0,
+        "delta_ci95_upper": 0.001820435273998644
+      },
+      "SNFH": {
+        "baseline": 28.574906782396823,
+        "final": 28.383420531452703,
+        "delta": -0.19148625094411997,
+        "baseline_ci95_lower": 19.36676828728323,
+        "baseline_ci95_upper": 39.01246260346195,
+        "final_ci95_lower": 19.13800023801101,
+        "final_ci95_upper": 38.894422459093676,
+        "delta_ci95_lower": -0.6242893476801331,
+        "delta_ci95_upper": 0.00874593668143806
+      },
+      "ET": {
+        "baseline": 42.49217285842045,
+        "final": 44.85512269353245,
+        "delta": 2.3629498351119977,
+        "baseline_ci95_lower": 27.84472155784657,
+        "baseline_ci95_upper": 58.28820149436061,
+        "final_ci95_lower": 29.849895104621922,
+        "final_ci95_upper": 60.75866871042305,
+        "delta_ci95_lower": -9.199034819173383,
+        "delta_ci95_upper": 12.756872765924856
+      },
+      "RC": {
+        "baseline": 47.48276080146838,
+        "final": 47.48276080146838,
+        "delta": 0.0,
+        "baseline_ci95_lower": 27.34572897401946,
+        "baseline_ci95_upper": 70.6263282102492,
+        "final_ci95_lower": 27.34572897401946,
+        "final_ci95_upper": 70.6263282102492,
+        "delta_ci95_lower": 0.0,
+        "delta_ci95_upper": 0.0
+      }
+    },
+    "hd95_subject_weighted_alternative_estimand": {
+      "WT": {
+        "baseline": 33.15455526973865,
+        "final": 33.165693366418985,
+        "delta": 0.011138096680333831
+      },
+      "TC": {
+        "baseline": 48.97088574596092,
+        "final": 48.78225970235248,
+        "delta": -0.18862604360843704
+      },
+      "NETC": {
+        "baseline": 20.744647790245967,
+        "final": 20.744947898234976,
+        "delta": 0.00030010798900903524
+      },
+      "SNFH": {
+        "baseline": 31.355564237546293,
+        "final": 31.259159803445968,
+        "delta": -0.09640443410032518
+      },
+      "ET": {
+        "baseline": 43.724454961254125,
+        "final": 46.85737463516386,
+        "delta": 3.1329196739097327
+      },
+      "RC": {
+        "baseline": 44.37093721389056,
+        "final": 44.37093721389056,
+        "delta": 0.0
+      }
+    },
+    "lesion_detection_comparison": {
+      "WT": {
+        "baseline": {
+          "true_positive_lesions": 231.0,
+          "false_positive_lesions": 20.0,
+          "false_negative_lesions": 15.0,
+          "reference_lesions": 246.0,
+          "predicted_lesions": 251.0,
+          "sensitivity": 0.9390243902439024,
+          "precision": 0.9203187250996016,
+          "f1": 0.9295774647887323
+        },
+        "final": {
+          "true_positive_lesions": 231.0,
+          "false_positive_lesions": 20.0,
+          "false_negative_lesions": 15.0,
+          "reference_lesions": 246.0,
+          "predicted_lesions": 251.0,
+          "sensitivity": 0.9390243902439024,
+          "precision": 0.9203187250996016,
+          "f1": 0.9295774647887323
+        },
+        "delta": {
+          "sensitivity": 0.0,
+          "sensitivity_ci95_lower": 0.0,
+          "sensitivity_ci95_upper": 0.0,
+          "precision": 0.0,
+          "precision_ci95_lower": 0.0,
+          "precision_ci95_upper": 0.0,
+          "f1": 0.0,
+          "f1_ci95_lower": 0.0,
+          "f1_ci95_upper": 0.0
+        }
+      },
+      "TC": {
+        "baseline": {
+          "true_positive_lesions": 178.0,
+          "false_positive_lesions": 11.0,
+          "false_negative_lesions": 25.0,
+          "reference_lesions": 203.0,
+          "predicted_lesions": 189.0,
+          "sensitivity": 0.8768472906403941,
+          "precision": 0.9417989417989417,
+          "f1": 0.9081632653061223
+        },
+        "final": {
+          "true_positive_lesions": 173.0,
+          "false_positive_lesions": 8.0,
+          "false_negative_lesions": 30.0,
+          "reference_lesions": 203.0,
+          "predicted_lesions": 181.0,
+          "sensitivity": 0.8522167487684729,
+          "precision": 0.9558011049723757,
+          "f1": 0.9010416666666666
+        },
+        "delta": {
+          "sensitivity": -0.024630541871921263,
+          "sensitivity_ci95_lower": -0.050282850570395755,
+          "sensitivity_ci95_upper": -0.004586632315361718,
+          "precision": 0.014002163173433946,
+          "precision_ci95_lower": -0.006280303473880239,
+          "precision_ci95_upper": 0.03953469604743415,
+          "f1": -0.007121598639455717,
+          "f1_ci95_lower": -0.024995968320690128,
+          "f1_ci95_upper": 0.009826128329035247
+        }
+      },
+      "NETC": {
+        "baseline": {
+          "true_positive_lesions": 78.0,
+          "false_positive_lesions": 2.0,
+          "false_negative_lesions": 10.0,
+          "reference_lesions": 88.0,
+          "predicted_lesions": 80.0,
+          "sensitivity": 0.8863636363636364,
+          "precision": 0.975,
+          "f1": 0.9285714285714285
+        },
+        "final": {
+          "true_positive_lesions": 78.0,
+          "false_positive_lesions": 2.0,
+          "false_negative_lesions": 10.0,
+          "reference_lesions": 88.0,
+          "predicted_lesions": 80.0,
+          "sensitivity": 0.8863636363636364,
+          "precision": 0.975,
+          "f1": 0.9285714285714285
+        },
+        "delta": {
+          "sensitivity": 0.0,
+          "sensitivity_ci95_lower": 0.0,
+          "sensitivity_ci95_upper": 0.0,
+          "precision": 0.0,
+          "precision_ci95_lower": 0.0,
+          "precision_ci95_upper": 0.0,
+          "f1": 0.0,
+          "f1_ci95_lower": 0.0,
+          "f1_ci95_upper": 0.0
+        }
+      },
+      "SNFH": {
+        "baseline": {
+          "true_positive_lesions": 226.0,
+          "false_positive_lesions": 17.0,
+          "false_negative_lesions": 15.0,
+          "reference_lesions": 241.0,
+          "predicted_lesions": 243.0,
+          "sensitivity": 0.9377593360995851,
+          "precision": 0.9300411522633745,
+          "f1": 0.9338842975206612
+        },
+        "final": {
+          "true_positive_lesions": 226.0,
+          "false_positive_lesions": 17.0,
+          "false_negative_lesions": 15.0,
+          "reference_lesions": 241.0,
+          "predicted_lesions": 243.0,
+          "sensitivity": 0.9377593360995851,
+          "precision": 0.9300411522633745,
+          "f1": 0.9338842975206612
+        },
+        "delta": {
+          "sensitivity": 0.0,
+          "sensitivity_ci95_lower": 0.0,
+          "sensitivity_ci95_upper": 0.0,
+          "precision": 0.0,
+          "precision_ci95_lower": 0.0,
+          "precision_ci95_upper": 0.0,
+          "f1": 0.0,
+          "f1_ci95_lower": 0.0,
+          "f1_ci95_upper": 0.0
+        }
+      },
+      "ET": {
+        "baseline": {
+          "true_positive_lesions": 175.0,
+          "false_positive_lesions": 13.0,
+          "false_negative_lesions": 20.0,
+          "reference_lesions": 195.0,
+          "predicted_lesions": 188.0,
+          "sensitivity": 0.8974358974358975,
+          "precision": 0.9308510638297872,
+          "f1": 0.9138381201044387
+        },
+        "final": {
+          "true_positive_lesions": 168.0,
+          "false_positive_lesions": 8.0,
+          "false_negative_lesions": 27.0,
+          "reference_lesions": 195.0,
+          "predicted_lesions": 176.0,
+          "sensitivity": 0.8615384615384616,
+          "precision": 0.9545454545454546,
+          "f1": 0.9056603773584906
+        },
+        "delta": {
+          "sensitivity": -0.03589743589743588,
+          "sensitivity_ci95_lower": -0.06508944543828264,
+          "sensitivity_ci95_upper": -0.010526315789473713,
+          "precision": 0.02369439071566737,
+          "precision_ci95_lower": -0.002872194923306501,
+          "precision_ci95_upper": 0.05846768733717263,
+          "f1": -0.008177742745948069,
+          "f1_ci95_lower": -0.03028001576889344,
+          "f1_ci95_upper": 0.014091420619905204
+        }
+      },
+      "RC": {
+        "baseline": {
+          "true_positive_lesions": 163.0,
+          "false_positive_lesions": 27.0,
+          "false_negative_lesions": 4.0,
+          "reference_lesions": 167.0,
+          "predicted_lesions": 190.0,
+          "sensitivity": 0.9760479041916168,
+          "precision": 0.8578947368421053,
+          "f1": 0.9131652661064426
+        },
+        "final": {
+          "true_positive_lesions": 163.0,
+          "false_positive_lesions": 27.0,
+          "false_negative_lesions": 4.0,
+          "reference_lesions": 167.0,
+          "predicted_lesions": 190.0,
+          "sensitivity": 0.9760479041916168,
+          "precision": 0.8578947368421053,
+          "f1": 0.9131652661064426
+        },
+        "delta": {
+          "sensitivity": 0.0,
+          "sensitivity_ci95_lower": 0.0,
+          "sensitivity_ci95_upper": 0.0,
+          "precision": 0.0,
+          "precision_ci95_lower": 0.0,
+          "precision_ci95_upper": 0.0,
+          "f1": 0.0,
+          "f1_ci95_lower": 0.0,
+          "f1_ci95_upper": 0.0
+        }
+      }
+    },
+    "multiplicity": {
+      "method": "Holm family-wise correction",
+      "family": [
+        "WT",
+        "TC",
+        "NETC",
+        "SNFH",
+        "ET",
+        "RC",
+        "Six-region mean"
+      ],
+      "primary_test": "two-sided subject-cluster sign-flip permutation test using the case-weighted mean statistic",
+      "sensitivity_test": "two-sided sign-flip permutation test on subject-level mean differences",
+      "permutations": 100000
+    },
+    "exploratory_post_hoc_subgroups": [
+      {
+        "subgroup": "Total foreground bottom 10% (<= 18253 voxels)",
+        "metric": "ET lesion-wise Dice",
+        "cases": 20,
+        "subjects": 11,
+        "baseline_mean": 0.9042532656620086,
+        "final_mean": 0.904269979850142,
+        "paired_delta": 1.6714188133404305e-05,
+        "delta_ci95_lower": 0.0,
+        "delta_ci95_upper": 4.2872137045183035e-05,
+        "bootstrap_probability_delta_gt_zero": 0.8911
+      },
+      {
+        "subgroup": "ET-positive bottom 10% (<= 242 voxels)",
+        "metric": "ET lesion-wise Dice",
+        "cases": 16,
+        "subjects": 12,
+        "baseline_mean": 0.3509849983127087,
+        "final_mean": 0.2572526068739727,
+        "paired_delta": -0.09373239143873596,
+        "delta_ci95_lower": -0.2676442557189368,
+        "delta_ci95_upper": 0.0,
+        "bootstrap_probability_delta_gt_zero": 0.023
+      },
+      {
+        "subgroup": "RC-positive bottom 10% (<= 852 voxels)",
+        "metric": "RC lesion-wise Dice",
+        "cases": 17,
+        "subjects": 13,
+        "baseline_mean": 0.5039107923385924,
+        "final_mean": 0.5039107923385924,
+        "paired_delta": 0.0,
+        "delta_ci95_lower": 0.0,
+        "delta_ci95_upper": 0.0,
+        "bootstrap_probability_delta_gt_zero": 0.0
+      },
+      {
+        "subgroup": "Total foreground bottom 25% (<= 34960 voxels)",
+        "metric": "ET lesion-wise Dice",
+        "cases": 49,
+        "subjects": 29,
+        "baseline_mean": 0.7334992725925676,
+        "final_mean": 0.7490478134750289,
+        "paired_delta": 0.015548540882461279,
+        "delta_ci95_lower": -0.013589405846711424,
+        "delta_ci95_upper": 0.06337182704916881,
+        "bootstrap_probability_delta_gt_zero": 0.6534
+      },
+      {
+        "subgroup": "ET-positive bottom 25% (<= 1284 voxels)",
+        "metric": "ET lesion-wise Dice",
+        "cases": 39,
+        "subjects": 28,
+        "baseline_mean": 0.35068270498650633,
+        "final_mean": 0.2843730383185465,
+        "paired_delta": -0.0663096666679598,
+        "delta_ci95_lower": -0.1336802508117513,
+        "delta_ci95_upper": -0.019619642311317784,
+        "bootstrap_probability_delta_gt_zero": 0.0
+      },
+      {
+        "subgroup": "RC-positive bottom 25% (<= 2356 voxels)",
+        "metric": "RC lesion-wise Dice",
+        "cases": 42,
+        "subjects": 25,
+        "baseline_mean": 0.590291022412134,
+        "final_mean": 0.590291022412134,
+        "paired_delta": 0.0,
+        "delta_ci95_lower": 0.0,
+        "delta_ci95_upper": 0.0,
+        "bootstrap_probability_delta_gt_zero": 0.0
+      },
+      {
+        "subgroup": "ET-negative",
+        "metric": "ET lesion-wise Dice",
+        "cases": 41,
+        "subjects": 26,
+        "baseline_mean": 0.7804878048780488,
+        "final_mean": 0.8780487804878049,
+        "paired_delta": 0.0975609756097561,
+        "delta_ci95_lower": 0.0,
+        "delta_ci95_upper": 0.21951219512195122,
+        "bootstrap_probability_delta_gt_zero": 0.9609
+      },
+      {
+        "subgroup": "RC-negative",
+        "metric": "RC lesion-wise Dice",
+        "cases": 29,
+        "subjects": 15,
+        "baseline_mean": 0.3793103448275862,
+        "final_mean": 0.3793103448275862,
+        "paired_delta": 0.0,
+        "delta_ci95_lower": 0.0,
+        "delta_ci95_upper": 0.0,
+        "bootstrap_probability_delta_gt_zero": 0.0
+      }
+    ],
+    "claim_boundary": "No adjusted superiority claim is supported. The frozen V2 result must be reported with the tiny ET-positive harm, and subgroup analyses must be labeled post-hoc exploratory because they were not preregistered before opening the holdout."
+  }
+}

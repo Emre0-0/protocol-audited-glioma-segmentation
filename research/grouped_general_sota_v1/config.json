@@ -1,0 +1,58 @@
+{
+  "experiment_name": "grouped_general_sota_v1",
+  "protocol": {
+    "source_config": "research/grouped_delta_roi_v1/config.json",
+    "fold": 0,
+    "expected_train_cases": 932,
+    "expected_validation_cases": 223,
+    "expected_train_subjects": 418,
+    "expected_validation_subjects": 103,
+    "locked_test_cases": 195,
+    "locked_test_subjects": 92
+  },
+  "dataset": {
+    "id": 503,
+    "name": "BraTS2024Grouped4Ch"
+  },
+  "nnunet": {
+    "baseline_plans": "nnUNetResEncUNet10p5GBPlans",
+    "plans": "nnUNetResEncUNet9GBPlans",
+    "configuration": "3d_fullres",
+    "baseline_trainer": "nnUNetTrainer_250epochs",
+    "candidate_trainer": "nnUNetTrainer_BraTSRegionAware120",
+    "smoke_trainer": "nnUNetTrainer_BraTSRegionAwareSmoke",
+    "data_augmentation_processes": 4,
+    "official_metric_workers": 4
+  },
+  "candidate": {
+    "warm_start": "baseline checkpoint_best.pth",
+    "epochs": 120,
+    "initial_learning_rate": 0.001,
+    "gpu_duty_cycle_target": 0.8,
+    "gpu_memory_plan_target_gb": 9.0,
+    "region_auxiliary_weight": 0.35,
+    "absent_region_false_positive_weight": 0.25,
+    "regions": {
+      "WT": [1, 2, 3],
+      "TC": [1, 3],
+      "NETC": [1],
+      "SNFH": [2],
+      "ET": [3],
+      "RC": [4]
+    }
+  },
+  "decision_gate": {
+    "minimum_mean_six_region_lesion_wise_dice_gain": 0.003,
+    "minimum_non_degraded_region_count": 4,
+    "maximum_any_region_lesion_wise_dice_drop": 0.01,
+    "maximum_et_or_rc_lesion_wise_dice_drop": 0.005
+  },
+  "paths": {
+    "raw_root": "processed/nnunet_raw",
+    "preprocessed_root": "processed/nnunet_preprocessed",
+    "results_root": "experiments/nnunet_results",
+    "experiment_dir": "experiments/grouped_general_sota_v1",
+    "baseline_official_metrics": "experiments/grouped_delta_roi_v1/official_metrics/baseline",
+    "official_metric_vendor": "research/vendor/BraTS-2024-Metrics"
+  }
+}

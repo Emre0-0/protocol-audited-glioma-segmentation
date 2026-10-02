@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Please cite this versioned software release when using the code."
+title: "Protocol-Audited Subject-Disjoint Evaluation for Post-Treatment Glioma Segmentation: Research Code"
+type: software
+authors:
+  - family-names: Karabaca
+    given-names: Emre
+  - family-names: Sahin Sadik
+    given-names: Evin
+version: 1.0.0
+date-released: 2026-10-03
+license: MIT
+repository-code: "https://github.com/Emre0-0/protocol-audited-glioma-segmentation"
+abstract: "Subject-grouped nnU-Net training, BraTS lesion-wise evaluation, frozen ET-component filtering, and subject-cluster statistics for a retrospective study of post-treatment glioma segmentation."

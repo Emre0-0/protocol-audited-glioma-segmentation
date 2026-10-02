@@ -1,0 +1,74 @@
+{
+  "experiment_name": "final_locked_test_v1",
+  "protocol": {
+    "locked_test_cases": "processed/brats_subject_grouped_protocol_v1/locked_test_cases.csv",
+    "development_cases": "processed/brats_subject_grouped_protocol_v1/development_cases.csv",
+    "split_file": "processed/nnunet_preprocessed/Dataset503_BraTS2024Grouped4Ch/splits_final.json",
+    "expected_test_cases": 195,
+    "expected_test_subjects": 92,
+    "test_policy": "One-time evaluation after model and prediction lock; no post-test model selection."
+  },
+  "data": {
+    "npz_root": "processed/brats2024_npz_full",
+    "modalities": ["t1n", "t1c", "t2w", "t2f"]
+  },
+  "models": {
+    "baseline": {
+      "model_folder": "experiments/nnunet_results/Dataset503_BraTS2024Grouped4Ch/nnUNetTrainer_250epochs__nnUNetResEncUNet10p5GBPlans__3d_fullres",
+      "checkpoint": "experiments/nnunet_results/Dataset503_BraTS2024Grouped4Ch/nnUNetTrainer_250epochs__nnUNetResEncUNet10p5GBPlans__3d_fullres/fold_0/checkpoint_best.pth",
+      "expected_sha256": "D75038EB1FE563D04FB19B955BC7B3380ECA09ABACBD81DFC9C238505CAFAA70",
+      "fold": 0,
+      "checkpoint_name": "checkpoint_best.pth"
+    },
+    "specialist": {
+      "model_folder": "experiments/nnunet_results/Dataset503_BraTS2024Grouped4Ch/nnUNetTrainer_BraTSRegionAware120__nnUNetResEncUNet9GBPlans__3d_fullres",
+      "checkpoint": "experiments/nnunet_results/Dataset503_BraTS2024Grouped4Ch/nnUNetTrainer_BraTSRegionAware120__nnUNetResEncUNet9GBPlans__3d_fullres/fold_0/checkpoint_best.pth",
+      "original_sha256": "3719E55390F586630403E52AA39530E31A573244426EF965B8C86C582808DFD1",
+      "fold": 0,
+      "checkpoint_name": "checkpoint_best.pth"
+    }
+  },
+  "frozen_candidate": {
+    "source_experiment": "experiments/grouped_et_topology_guard_v2",
+    "source_final_audit": "experiments/grouped_et_topology_guard_v2/final_audit.json",
+    "source_prediction_dir": "experiments/grouped_et_topology_guard_v2/predictions/et_cc_topology_guard_specialist_nonrc",
+    "baseline_validation_dir": "experiments/nnunet_results/Dataset503_BraTS2024Grouped4Ch/nnUNetTrainer_250epochs__nnUNetResEncUNet10p5GBPlans__3d_fullres/fold_0/validation",
+    "specialist_validation_dir": "experiments/nnunet_results/Dataset503_BraTS2024Grouped4Ch/nnUNetTrainer_BraTSRegionAware120__nnUNetResEncUNet9GBPlans__3d_fullres/fold_0/validation",
+    "selected_variant": "et_cc_topology_guard_specialist_nonrc_reproduced",
+    "fallback": "specialist_nonrc",
+    "expected_validation_cases": 223
+  },
+  "revalidation": {
+    "comparison": "experiments/final_locked_test_v1/reproduced_validation/comparison/comparison.json",
+    "build_manifest": "experiments/final_locked_test_v1/reproduced_validation/build_manifest.json",
+    "official_metrics_metadata": "experiments/final_locked_test_v1/reproduced_validation/official_metrics/et_cc_topology_guard_specialist_nonrc_reproduced/metadata.json",
+    "official_metrics_summary": "experiments/final_locked_test_v1/reproduced_validation/official_metrics/et_cc_topology_guard_specialist_nonrc_reproduced/summary_official.csv",
+    "validation_config": "research/final_locked_test_v1/reproduced_validation_config.json",
+    "expected_decision": "GO_TOPOLOGY_GUARDED_VALIDATION_CANDIDATE",
+    "expected_metric_repository_commit": "f1131e340e155908553c226675644a6363b998b7"
+  },
+  "inference": {
+    "tile_step_size": 0.5,
+    "use_gaussian": true,
+    "use_mirroring": true,
+    "perform_everything_on_device": true,
+    "num_processes_preprocessing": 3,
+    "num_processes_export": 3
+  },
+  "paths": {
+    "experiment_dir": "experiments/final_locked_test_v1",
+    "input_images": "experiments/final_locked_test_v1/input_images",
+    "baseline_predictions": "experiments/final_locked_test_v1/predictions/baseline",
+    "specialist_predictions": "experiments/final_locked_test_v1/predictions/specialist",
+    "final_predictions": "experiments/final_locked_test_v1/predictions/frozen_v2",
+    "released_test_labels": "experiments/final_locked_test_v1/private_test_labels",
+    "baseline_official_metrics": "experiments/final_locked_test_v1/official_metrics/baseline",
+    "final_official_metrics": "experiments/final_locked_test_v1/official_metrics/frozen_v2",
+    "official_metric_vendor": "research/vendor/BraTS-2024-Metrics"
+  },
+  "statistics": {
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 20260807,
+    "bootstrap_unit": "subject"
+  }
+}

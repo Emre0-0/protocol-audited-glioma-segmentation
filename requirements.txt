@@ -1,0 +1,7 @@
+-r requirements-analysis.txt
+# Install the appropriate PyTorch build separately; the original run used 2.10.0+cu130.
+torch==2.10.0
+nnunetv2==2.7.0
+dynamic-network-architectures==0.4.3
+batchgenerators==0.25.2
+batchgeneratorsv2==0.3.2

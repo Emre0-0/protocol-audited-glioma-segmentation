@@ -1,0 +1,67 @@
+{
+  "experiment_name": "grouped_delta_roi_v1",
+  "protocol": {
+    "directory": "processed/brats_subject_grouped_protocol_v1",
+    "splits": "processed/brats_subject_grouped_protocol_v1/splits_final.json",
+    "development_cases": "processed/brats_subject_grouped_protocol_v1/development_cases.csv",
+    "locked_test_cases": "processed/brats_subject_grouped_protocol_v1/locked_test_cases.csv",
+    "fold": 0,
+    "expected_development_cases": 1155,
+    "expected_development_subjects": 521,
+    "expected_locked_test_cases": 195,
+    "expected_locked_test_subjects": 92
+  },
+  "datasets": {
+    "baseline": {
+      "id": 503,
+      "name": "BraTS2024Grouped4Ch"
+    },
+    "delta": {
+      "id": 504,
+      "name": "BraTS2024GroupedDeltaT1"
+    },
+    "legacy_4ch_source": {
+      "id": 501,
+      "name": "BraTS2024GliomaNPZ"
+    },
+    "legacy_delta_source": {
+      "id": 502,
+      "name": "BraTS2024GliomaDeltaT1"
+    }
+  },
+  "delta_channel": {
+    "index": 4,
+    "name": "t1c_minus_t1n",
+    "formula": "t1c - t1n",
+    "outside_brain_value": 0.0
+  },
+  "nnunet": {
+    "planner": "nnUNetPlannerResEncM",
+    "plans": "nnUNetResEncUNet10p5GBPlans",
+    "trainer": "nnUNetTrainer_250epochs",
+    "configuration": "3d_fullres",
+    "checkpoint": "checkpoint_best.pth",
+    "gpu_memory_target_gb": 10.5,
+    "preprocess_workers": 6,
+    "official_metric_workers": 4,
+    "data_augmentation_processes": 4
+  },
+  "paths": {
+    "project_root": ".",
+    "npz_root": "processed/brats2024_npz_full",
+    "raw_root": "processed/nnunet_raw",
+    "preprocessed_root": "processed/nnunet_preprocessed",
+    "results_root": "experiments/nnunet_results",
+    "experiment_dir": "experiments/grouped_delta_roi_v1",
+    "official_metric_vendor": "research/vendor/BraTS-2024-Metrics"
+  },
+  "go_no_go": {
+    "maximum_mean_region_lw_dice_drop": 0.005,
+    "maximum_rc_negative_fp_rate_increase": 0.02,
+    "delta_et_global_lw_dice_gain": 0.01,
+    "delta_small_et_lw_dice_gain": 0.03,
+    "delta_small_et_recall_gain": 0.05,
+    "delta_small_tc_lw_dice_gain": 0.03,
+    "delta_small_tc_recall_gain": 0.05
+  }
+}
