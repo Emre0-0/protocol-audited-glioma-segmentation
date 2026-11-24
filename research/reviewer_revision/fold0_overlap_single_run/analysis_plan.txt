@@ -1,0 +1,29 @@
+Development fold 0: controlled longitudinal overlap
+
+Primary estimand: mean change in official six-region lesion-wise Dice
+(exposed-training model minus archived clean model) on one fixed index scan
+for each of the 40 deliberately exposed patients. Positive values favor
+the exposed-training model. Use the final epoch (250) for both models;
+do not choose a checkpoint or subgroup after inspecting the scores.
+
+Control contrast: estimate the same change on one index scan per unexposed
+longitudinal patient (n=39). Report the exposed-group change minus this
+control-group change, including both component estimates. This helps
+distinguish an exposure-specific pattern from a shift affecting both groups.
+It is not a replication across independently trained model pairs.
+
+Secondary summaries: six regional Dice changes, all 103 index scans, and
+all 183 retained evaluation scans. The last summary weights scans equally
+and resamples patients with their scans kept together. For each contrast,
+use 10,000 patient bootstrap draws with the models paired within scan.
+Resample the two disjoint groups independently for the contrast of changes.
+Report percentile intervals; these describe patient sampling conditional
+on the two fitted models, not variability across training seeds. Regional
+and subgroup findings are descriptive, not separately confirmed effects.
+
+Neither the 40 inserted sibling scans nor the retrospective holdout enters
+any evaluation denominator. Both training arms have the same scan and
+patient counts, but the 40 swaps change training composition and the old
+initialization was not recovered. Do not equate this estimate with the
+historical performance gap or claim that an interval spanning zero proves
+there was no leakage effect.

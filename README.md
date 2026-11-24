@@ -6,6 +6,19 @@ Code accompanying **Protocol-Audited Subject-Disjoint Evaluation Reveals Small-L
 
 This release was checked against the authors' manuscript source on **3 October 2026**. It provides the subject-grouped partition, nnU-Net training configuration, frozen ET-component filtering, official BraTS 2024 evaluation, and subject-cluster statistical analysis. The study concerns evaluation reliability and small-lesion failure modes; it does not introduce a new architecture or establish clinical readiness.
 
+## November revision (v1.1.0)
+
+From the repository root, run the following with Python 3.10 or 3.11. Neither command needs scans, model weights, or a GPU.
+
+```bash
+python scripts/verify_release.py
+python scripts/verify_revision.py
+```
+
+The second command reads the paired six-region scores for 1,155 development scans and 40 exposed index scans, and the ET detection counts. It reports the five-fold baseline-to-V2 change (0.7634 to 0.7712), missed eligible ET lesions in the lowest volume decile (68 of 109), and the single-fold longitudinal exposure contrast (0.7760 to 0.7831). The latter is a single training comparison, not an estimate of how much leakage inflated the historical Dice.
+
+The [revision directory](research/reviewer_revision/) includes the frozen cohort, specialist recipe, weight checks, scoring code, and full-precision summary tables. Public scan scores are rounded to six decimals and sorted by score, with no case identifiers or linkage between tables. They reproduce the point estimates at manuscript precision, not the patient-cluster confidence intervals. Those require the original subject mapping and authorized scoring records. The ET counts are pooled, not individual lesion records. The OOF and exposure analyses do not use the retrospective holdout.
+
 ## Reported study
 
 The source cohort contains 1,350 scans from 613 subjects. Development comprises 1,155 scans from 521 subjects, evaluated across five subject-disjoint folds. The secondary retrospective holdout contains 195 scans from 92 subjects. All time points from a subject stay together.
@@ -28,7 +41,7 @@ The retrospective holdout comparison is 0.7592 for the fold-0 baseline and 0.762
 Use Python 3.10. The release verifier only needs the standard library:
 
 ```bash
-git clone https://github.com/Emre0-0/protocol-audited-glioma-segmentation.git
+git clone --branch v1.1.0 https://github.com/Emre0-0/protocol-audited-glioma-segmentation.git
 cd protocol-audited-glioma-segmentation
 python scripts/verify_release.py
 ```
@@ -66,7 +79,7 @@ The legacy names containing `sota` are historical experiment identifiers, not cl
 
 ## Data and model availability
 
-MRI volumes, masks, individual-case metric tables, checkpoint weights, private logs, and the unpublished manuscript are not distributed here. Dataset access must be obtained from the respective providers. Published partition files contain only pseudonymous BraTS identifiers and assignments. [DATA_ACCESS.md](docs/DATA_ACCESS.md) describes the required inputs and the limits of reproducing the original processed archive.
+MRI volumes, masks, case-linked metric tables, checkpoint weights and private logs are not distributed here. The unlinked revision extracts contain model scores only. Dataset access must be obtained from the respective providers. [DATA_ACCESS.md](docs/DATA_ACCESS.md) describes the imaging inputs and the limits of reproducing the original processed archive.
 
 Training from authorized input data is supported. Exact reproduction of historical masks additionally requires the authors' original checkpoints; these are maintained separately, and no public download is claimed. Hardware-dependent kernels mean retraining is not guaranteed to be bitwise identical.
 

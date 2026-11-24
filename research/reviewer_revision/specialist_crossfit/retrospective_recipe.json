@@ -1,0 +1,58 @@
+{
+  "comparison": "Reproduced fold-0 rule plus four newly fitted specialists; compare paired baseline and V2 full-volume predictions on all 1155 OOF scans; each scan appears once.",
+  "inputs": [
+    {
+      "architecture_signature": "E3FAD6B70523BAD267B79FBFEEADB6B576D12073B0F00529FF28C4FBA3FE7507",
+      "epoch": 250,
+      "expected_bytes": 819303683,
+      "fold": 1,
+      "path": "experiments/nnunet_results/Dataset503_BraTS2024Grouped4Ch/nnUNetTrainer_GroupedCV250Duty80__nnUNetResEncUNet10p5GBPlans__3d_fullres/fold_1/checkpoint_best.pth"
+    },
+    {
+      "architecture_signature": "E3FAD6B70523BAD267B79FBFEEADB6B576D12073B0F00529FF28C4FBA3FE7507",
+      "epoch": 245,
+      "expected_bytes": 819301059,
+      "fold": 2,
+      "path": "experiments/nnunet_results/Dataset503_BraTS2024Grouped4Ch/nnUNetTrainer_GroupedCV250Duty80__nnUNetResEncUNet10p5GBPlans__3d_fullres/fold_2/checkpoint_best.pth"
+    },
+    {
+      "architecture_signature": "E3FAD6B70523BAD267B79FBFEEADB6B576D12073B0F00529FF28C4FBA3FE7507",
+      "epoch": 239,
+      "expected_bytes": 819297987,
+      "fold": 3,
+      "path": "experiments/nnunet_results/Dataset503_BraTS2024Grouped4Ch/nnUNetTrainer_GroupedCV250Duty80__nnUNetResEncUNet10p5GBPlans__3d_fullres/fold_3/checkpoint_best.pth"
+    },
+    {
+      "architecture_signature": "E3FAD6B70523BAD267B79FBFEEADB6B576D12073B0F00529FF28C4FBA3FE7507",
+      "epoch": 245,
+      "expected_bytes": 819301059,
+      "fold": 4,
+      "path": "experiments/nnunet_results/Dataset503_BraTS2024Grouped4Ch/nnUNetTrainer_GroupedCV250Duty80__nnUNetResEncUNet10p5GBPlans__3d_fullres/fold_4/checkpoint_best.pth"
+    }
+  ],
+  "primary_summary": "V2 minus baseline mean six-region official lesion-wise Dice with paired patient-cluster percentile 95% CI, 10000 replicates; no configuration selection on these scores.",
+  "purpose": "Exploratory retrospective patient-grouped crossfit; historical design exposure and fold-level best-checkpoint selection remain.",
+  "rule": {
+    "fallback": "specialist_nonrc",
+    "name": "et_cc_topology_guard_specialist_nonrc_reproduced",
+    "threshold_search": false
+  },
+  "secondary": "Report six regional Dice and HD95, ET sensitivity/precision and paired changes, ET-positive low scan-burden strata, and per-fold results including losses. No claim of independent external validation.",
+  "sha256": {
+    "processed/nnunet_preprocessed/Dataset503_BraTS2024Grouped4Ch/nnUNetResEncUNet9GBPlans.json": "f307c0962b0982c17d3451786a7bfb11505470e40dc0548f9fe33f58119c4a6b",
+    "processed/nnunet_preprocessed/Dataset503_BraTS2024Grouped4Ch/splits_final.json": "6545c6c03469753a0bf6c470e6532cfb5a57a78ab3786b10d45bbc7df57e7eac",
+    "research/final_locked_test_v1/apply_frozen_v2.py": "c714677ddb60e92675807ef09bf70c3738aa64660a9533c9e054a245339143d7",
+    "research/final_locked_test_v1/build_reproduced_validation.py": "22ef0d6a1accff15458fc209684f2682b82b5af991ce1facdab4968e960d6239",
+    "research/final_locked_test_v1/freeze_model.py": "0ed1577019347997fbf6ed0a326450a1962564755649c6fdf3a04d63668f5ecf",
+    "research/final_locked_test_v1/predict_model.py": "c9701953ddd51f16c6d5079b21e093b0ff472438cce18446520544b0cfdc106a",
+    "research/final_locked_test_v1/prepare_test_images.py": "ecec065871e700568cbea26ebcab4f3444e94706d3d4299e85142102ba3b3dd4",
+    "research/final_locked_test_v1/recreate_specialist.ps1": "b47a7c47770ee95f71be6a8a80b23916b63791e7ccc54c007295adca2598b0ba",
+    "research/final_locked_test_v1/reproduced_validation_config.json": "3aa0b42cd0dc708278aef557f0a61ed3f466c3932648cb9c7ec2509d307f06eb",
+    "research/grouped_et_topology_guard_v2/build_topology_guard.py": "674b18988d6c90ff0b1d6e84229255e12adb085190d44cf8fcc16619fca07910",
+    "research/grouped_et_topology_guard_v2/compare_candidates.py": "c05b2214de1fb2cc7828411bd2317d927646dc0cb3756cb7ca6738a85b4a8343",
+    "research/grouped_et_topology_guard_v2/topology.py": "b6eb1b7c3b3a4f31d940d140984de3117502b8b62318a6ba70d98192cac07ece",
+    "research/grouped_general_sota_v1/run_custom_trainer.py": "a313db2768e3237a290c551e57ac47b3a89f5223b19f829fe6871e8b14809860",
+    "research/grouped_general_sota_v1/trainer.py": "4a3db9ba936bfb5cc8404d8fb8fde7f2827377391b0c253dbf0fc5db6e7eb1df"
+  },
+  "train": "For each additional fold 1-4 initialize from that fold's baseline best, using proxy variant of original launcher, 9GB 3d_fullres, 120 epochs, selecting best EMA. Do not train on the 195 holdout scans."
+}
