@@ -1,0 +1,57 @@
+{
+  "folds": [
+    {
+      "fold": 0,
+      "train_scans": 932,
+      "validation_scans": 223,
+      "train_patients": 418,
+      "validation_patients": 103
+    },
+    {
+      "fold": 1,
+      "train_scans": 908,
+      "validation_scans": 247,
+      "train_patients": 414,
+      "validation_patients": 107
+    },
+    {
+      "fold": 2,
+      "train_scans": 912,
+      "validation_scans": 243,
+      "train_patients": 416,
+      "validation_patients": 105
+    },
+    {
+      "fold": 3,
+      "train_scans": 930,
+      "validation_scans": 225,
+      "train_patients": 416,
+      "validation_patients": 105
+    },
+    {
+      "fold": 4,
+      "train_scans": 938,
+      "validation_scans": 217,
+      "train_patients": 420,
+      "validation_patients": 101
+    }
+  ],
+  "raw_directory_inventory": {
+    "imagesTr": {
+      "expected": 4620,
+      "nonzero": 4620,
+      "missing": [],
+      "zero_byte": []
+    },
+    "labelsTr": {
+      "expected": 1155,
+      "nonzero": 1155,
+      "missing": [],
+      "zero_byte": []
+    }
+  },
+  "plans_sha256": "f307c0962b0982c17d3451786a7bfb11505470e40dc0548f9fe33f58119c4a6b",
+  "splits_sha256": "6545c6c03469753a0bf6c470e6532cfb5a57a78ab3786b10d45bbc7df57e7eac",
+  "expected_cache": "nnUNetPlans_3d_fullres",
+  "cache_dir_exists": false
+}
