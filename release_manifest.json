@@ -2,7 +2,7 @@
   "algorithm": "sha256",
   "files": {
     ".gitattributes": "9aa6b41247e3ff740058ac562964e9c9c7600178c2e728c5f01eea0d213d3bc0",
-    ".github/workflows/ci.yml": "cb6192bab957276098f9db3be5ab4cf4ae3cd3f9dac8ad1f0762662c1ae36a76",
+    ".github/workflows/ci.yml": "2c502a792d20897205b08ac8bf3e63f82748edfeb3cdd626c6a2bf6316385f4d",
     ".gitignore": "fbe93acd934f3aa7c5a0c1ae912393f236e899999a13d56f661018b36733199c",
     "CITATION.cff": "f0fd96e1ad4c6c425545fc42430c5785a2bea65a584e4ecb488666af65df38ec",
     "configs/default.json": "c2c2ebb043bc34b1f6fe19e5c59c02435c36fdeea30b5f22abe16b5ab4d2db48",
